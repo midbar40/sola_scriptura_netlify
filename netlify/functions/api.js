@@ -60,7 +60,6 @@ api.listen(port, () => { /* 서버실행 */
     console.log(`Now listening on port ${port}`)
 })
 
-router.get('')
 
 module.exports.handler = serverless(api);
 
