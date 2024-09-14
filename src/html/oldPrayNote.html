@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>기도노트</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&family=Noto+Serif+KR:wght@200;300;400;500;600&family=Russo+One&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="../css/prayNote.css" />
+  <script type="module" src="../js/header.js" defer></script>
+  <script type="module" src="../js/prayNote.js" defer></script>
+</head>
+
+<body>
+  <!-- 헤더 -->
+  <!-- 모듈로 가져옴 -->
+  <div class="background"></div>
+
+  <!-- 메인 -->
+  <main>
+    <!-- Wrapper -->
+    <div class="pray-wrapper">
+      <!-- prayBucketList -->
+      <div class="prayBucketList">
+        <div class="prayBucketList-header">
+          <h4 class="prayBucketList-title">기도 버킷리스트</h4>
+        </div>
+        <div class="prayBucketList-body">
+          <table>
+            <thead>
+              <tr>
+                <td>응답</td>
+                <td>순번</td>
+                <td>내용</td>
+                <td>기도</td>
+                <td>응답</td>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <div class="right-click-menu"></div>
+        </div>
+        <div class="prayBucketList-input">
+          <form>
+            <input type="text" placeholder="기도 버킷리스트를 입력하세요, 마우스 우클릭을 통해 수정하거나 삭제할 수 있어요" />
+          </form>
+        </div>
+      </div>
+      <!-- Prayer of thanks -->
+      <div class="Prayer-of-thanks">
+        <div class="Prayer-of-thanks-header">
+          <h4 class="Prayer-of-thanks-title">한줄 감사기도</h4>
+        </div>
+        <div class="Prayer-of-thanks-body">
+          <table>
+            <thead>
+              <tr>
+                <td>순번</td>
+                <td>내용</td>
+                <td>일자</td>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="Prayer-of-thanks-input">
+          <form>
+            <input type="text" placeholder="감사한 일을 기억해보세요, 마우스 우클릭을 통해 수정하거나 삭제할 수 있어요" />
+          </form>
+        </div>
+      </div>
+      <!-- scripture & prayDiary -->
+      <div class="prayDiary">
+        <div class="scripture-board">
+          <div class="scripture">
+            <div class="scripture-1">
+              <!-- <p class="scripture-1-text"></p> -->
+            </div>
+            <div class="scripture-2">
+              <!-- <p class="scripture-2-text"></p> -->
+            </div>
+          </div>
+          <div class="prayDiary-output">
+            <div class="prayDiary-output-body">
+              <table>
+                <tr>
+                  <td>일자</td>
+                  <td>제목</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="prayDiary-input">
+          <div class="prayDiary-header">
+            <h4 class="prayDiary-title">기도일기</h4>
+          </div>
+          <form>
+            <input type="text" name="prayDiary-title" id="prayDiary-title" placeholder="오늘의 기도일기 제목" />
+            <textarea name="prayDiary-content" id="prayDiary-content" cols="30" rows="10"
+              placeholder="이곳에 기도일기를 적어보세요.
+오늘 하루 하나님께서 나에게 어떻게 역사하셨는지를 기억해보세요.
+
+왼쪽에 일기가 저장되고 저장된 일기를 마우스 우클릭해서 삭제할 수 있어요.
+포스트잇을 클릭하면 원하는 문구를 등록할 수 있어요.
+"></textarea>
+            <div class="btn-group">
+              <button type="button" class="saveBtn">저장</button>
+              <button type="button" class="cancelBtn">취소</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="mobile-background"></div>
+</body>
+
+</html>

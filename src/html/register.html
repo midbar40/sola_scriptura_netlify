@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>시편필사</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&family=Noto+Serif+KR:wght@200;300;400;500;600&family=Russo+One&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="../css/register.css" />
+  <link rel="stylesheet" href="../css/findUserId.css" />
+  <link rel="stylesheet" href="../css/findUserPw.css" />
+
+  <script type="module" src="../js/header.js" defer></script>
+  <script type="module" src="../js/register.js" defer></script>
+  <script type="module" src="../js/findUserId.js" defer></script>
+  <script type="module" src="../js/findUserPw.js" defer></script>
+  <script>
+    const redirectPage = () => {
+     const isLoggedIn = localStorage.getItem('로그인상태')
+     if(!isLoggedIn) {    
+       alert("로그인이 필요한 서비스입니다.");
+       location.href = "login.html";
+   }
+     else{location.href = "prayNote.html";}
+   };
+ </script>
+</head>
+
+<body>
+  <!-- 헤더파트 -->
+  <!-- header.js 모듈업로드 -->
+  <div class="background"></div>
+  <!-- 메인파트 -->
+  <main>
+    <form class="register-section">
+      <h2>회원가입</h2>
+      <div class="name">
+        <h4>이름</h4>
+        <input type="text" placeholder="이름을 입력하세요" required />
+      </div>
+      <div class="mobile">
+        <h4>휴대폰번호</h4>
+        <input type="mobile" placeholder="휴대폰번호를 입력해주세요" required />
+      </div>
+      <div class="email">
+        <h4>아이디(Email)</h4>
+        <input type="email" placeholder="이메일을 입력해주세요" required />
+      </div>
+      <div class="userPw">
+        <h4>비밀번호</h4>
+        <input type="password" placeholder="비밀번호를 입력하세요" required />
+      </div>
+      <div class="userPwCheck">
+        <h4>비밀번호 확인</h4>
+        <input type="password" placeholder="비밀번호를 다시 입력하세요" required />
+      </div>
+      <div class="submit">
+        <button class="register-btn" type="button">가입하기</button>
+      </div>
+      <div class="login-find">
+        <a href="./login.html" >로그인하기</a>
+        <a href="#" class="findUserId">아이디찾기</a>
+        <a href="#" class="findUserPw">비밀번호찾기</a>
+      </div>
+    </form>
+  </main>
+  <div class="mobile-background"></div>
+
+  <!-- 푸터파트 -->
+  <footer>
+    <div class="terms">
+      <a href="#">이용약관</a>
+      <a href="#">개인정보취급방침</a>
+      <a href="#">이용문의</a>
+      <p>본 사이트의 개역한글판의 저작권은 대한성서공회에 있습니다</p>
+    </div>
+    <div class="copyrights">
+      <p>copyright(c) 2023 Wilderness40. All rights reserved.</p>
+    </div>
+  </footer>
+  <div class="mobile-background"></div>
+</body>
+
+</html>

@@ -1,0 +1,982 @@
+@import url(../css/reset.css);
+@import url(../css/header.css);
+
+/* 메인 */
+body{
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+main .pray-wrapper {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 3rem;
+  padding-left: 2rem;
+  /* gap: 10px; */
+  /* background-color: rgb(255, 255, 255); */
+  box-shadow: inset 0px -3px 3px -3px rgba(0, 0, 0, 0.75),
+    inset 0px 3px 3px -3px rgba(0, 0, 0, 0.75),
+    inset -3px 0px 3px -3px rgba(0, 0, 0, 0.75),
+    inset 3px 0px 3px -3px rgba(0, 0, 0, 0.75);
+  overflow-y: auto;
+}
+
+/* main - prayBucketList */
+.prayBucketList {
+  width: 95%;
+  /* height: 800px; */
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+
+.prayBucketList-body {
+  width: 100%;
+  height: 85%;
+  overflow-y: auto;
+  font-size: 1.2rem;
+}
+
+.prayBucketList-body table {
+  width: 100%;
+}
+
+.prayBucketList-body table tr {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  padding-left: 1rem;
+}
+
+.prayBucketList-body table thead tr {
+  background-color: rgb(244, 236, 236);
+  font-weight: bold;
+}
+
+.prayBucketList-body table tr td:nth-child(1) {
+  width: 5%;
+}
+
+.prayBucketList-body table tr td:nth-child(2) {
+  width: 76%;
+}
+
+.prayBucketList-body table tr td:nth-child(3) {
+  width: 7%;
+}
+
+.prayBucketList-body table tr td:nth-child(4) {
+  width: 7%;
+}
+
+.prayBucketList-body table tr td:nth-child(5) {
+  width: 5%;
+}
+
+.prayBucketList-body tbody td:nth-child(2) {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.prayBucketlist-List:hover {
+  background-color: rgb(253, 155, 125);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.prayBucketList-input {
+  width: 1150px;
+  height: 80px;
+  margin-left: 6rem;
+}
+
+.prayBucketList-input form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prayBucketList-input form input {
+  width: 90%;
+  height: 50%;
+  font-size: 1.5rem;
+}
+
+.complete-checkbox {
+  width: 16px;
+  height: 16px;
+  margin-top: 8px;
+}
+
+
+
+
+
+
+/* main -  Prayer-of-thanks */
+.Prayer-of-thanks {
+  width: 95%;
+  padding-top: 2rem;
+}
+
+
+
+.Prayer-of-thanks-body {
+  width: 100%;
+  height: 85%;
+  overflow-y: auto;
+  font-size: 1.2rem;
+}
+
+.Prayer-of-thanks-body table {
+  width: 100%;
+}
+
+.Prayer-of-thanks-body table thead tr {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  padding-left: 1rem;
+  /* border-bottom: 1px solid black; */
+  background-color: rgb(244, 236, 236);
+  font-weight: bold;
+}
+
+.Prayer-of-thanks-body table tr td:nth-child(1) {
+  width: 6%;
+}
+
+.Prayer-of-thanks-body table tr td:nth-child(2) {
+  width: 80%;
+}
+
+.Prayer-of-thanks-body table tr td:nth-child(3) {
+  width: 14%;
+}
+
+.Prayer-of-thanks-body tbody td {
+  text-align: center;
+}
+
+.Prayer-of-thanks-body tbody td:nth-child(2) {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.Prayer-of-thanksList:hover {
+  background-color: rgb(253, 155, 125);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.Prayer-of-thanks-input {
+  width: 1150px;
+  height: 80px;
+  margin-left: 6rem;
+}
+
+.Prayer-of-thanks-input form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Prayer-of-thanks-input form input {
+  width: 100%;
+  height: 50%;
+  font-size: 1.5rem;
+}
+
+/* main - scripture & prayDiary */
+.prayDiary {
+  width: 95%;
+  height: 600px;
+  display: flex;
+  padding-top: 2rem;
+}
+
+.prayDiary-output {
+  width: 100%;
+  height: 50%;
+  font-size: 1.2rem;
+  border: 2px solid rgb(198, 208, 198);
+}
+
+.prayDiary-output-body {
+  width: 100%;
+  height: 85%;
+  overflow-y: auto;
+}
+
+.prayDiary-output-body table {
+  width: 100%;
+}
+
+.prayDiary-output-body table tr {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  padding-left: 1rem;
+}
+
+.prayDiary-output-body table tr:nth-child(1) {
+  background-color: rgb(244, 236, 236);
+  font-weight: bold;
+}
+
+.prayDiary-output-body table tr td:nth-child(1) {
+  width: 6%;
+}
+
+.prayDiary-output-body table tr td:nth-child(2) {
+  width: 80%;
+}
+
+.prayDiary-output-body table tr td:nth-child(3) {
+  width: 14%;
+}
+
+.prayDiary-input {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* border: 1px solid black; */
+}
+
+.prayDiary-input form {
+  width: 100%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.prayDiary-input form input {
+  width: 90%;
+  height: 5%;
+  font-size: 1.3rem;
+}
+
+.prayDiary-input form textarea {
+  width: 90%;
+  height: 80%;
+  resize: none;
+  font-size: 1.3rem;
+  overflow-y: auto;
+}
+
+.prayDiary-input form .btn-group {
+  width: 90%;
+  height: 15%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  margin-top: -1rem;
+}
+
+.prayDiary-input form .btn-group button {
+  width: 100px;
+  height: 35px;
+  border: none;
+  border-radius: 6px;
+}
+
+.prayDiary-input form .cancelBtn {
+  background-color: rgb(238, 34, 34);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.prayDiary-input form .saveBtn {
+  background-color: rgb(153, 153, 153);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.prayDiary-List:hover {
+  /* text-decoration: underline; */
+  background-color: rgb(253, 155, 125);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+/* 동작에 따른 디자인 */
+.right-click-menu {
+  width: 100px;
+  /* height: 100px; */
+  background-color: white;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.right-click-menu div:hover {
+  background-color: rgb(214, 156, 49);
+  color: rgb(255, 255, 255);
+}
+
+.right-click-menu div {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.active {
+  background-color: rgb(126, 49, 214);
+  color: rgb(255, 255, 255);
+}
+
+.warning-modal {
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.warning-modal-content p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+.warning-modal-btns {
+  margin-top: 20px;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.warning-modal-ok {
+  width: 75px;
+  height: 30px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(153, 153, 153);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.warning-modal-cancel {
+  width: 75px;
+  height: 30px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(238, 34, 34);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+/* 모달 뒤에 불투명한 레이어 */
+.modal-background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* 투명도 조절 가능 */
+  z-index: 10;
+  /* 모달보다 낮은 숫자 */
+}
+
+/* 포스트잇 부분 */
+.scripture-board {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  padding-top: 2rem;
+  padding-left: 2rem;
+}
+
+.scripture {
+  width: 20%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 1rem 0;
+}
+
+.scripture-1,
+.scripture-2,
+.scripture-3 {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 0 0 2rem 0;
+  cursor: pointer;
+}
+
+.scripture-1 {
+  background-color: rgb(255, 247, 209);
+}
+
+.scripture-2 {
+  background-color: rgb(228, 249, 224);
+}
+
+.scripture-3 {
+  background-color: rgb(255, 228, 241);
+}
+
+.scripture-1 p,
+.scripture-2 p,
+.scripture-3 p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+
+#pickText1,
+#pickText2,
+#pickText3 {
+  width: 200px;
+  height: 200px;
+  resize: none;
+  margin-top: 30px;
+  font-size: 1rem;
+}
+
+.scripture-1-btns,
+.scripture-2-btns,
+.scripture-3-btns {
+  width: 80%;
+  height: 30%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.scripture-1-saveBtn,
+.scripture-2-saveBtn,
+.scripture-3-saveBtn {
+  width: 75px;
+  height: 30px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(153, 153, 153);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.scripture-1-cancelBtn,
+.scripture-2-cancelBtn,
+.scripture-3-cancelBtn {
+  width: 75px;
+  height: 30px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(238, 34, 34);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+/* 스프링 디자인 */
+.spring-background-img {
+  width: 5%;
+  height: 100%;
+  position: absolute;
+  top: 9rem;
+  left: 2%;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+/* 설교노트 */
+.sermon {
+  width: 100%;
+  height: 95%;
+  display: flex;
+  padding-top: 1rem;
+}
+
+.sermon-input {
+  width: 50%;
+  height: 100%;
+  border: 2px solid rgb(198, 208, 198);
+  border-radius: 6px;
+  padding-left: 10px;
+  padding-top: 1rem;
+  margin-left: 1rem;
+}
+
+.sermon-input form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sermon-input form label {
+  display: flex;
+  align-items: center;
+}
+
+.sermon-input form label span {
+  display: inline-block;
+  width: 50px;
+}
+
+.sermon-input form input {
+  width: 89%;
+  height: 35px;
+}
+
+#sermon-content {
+  width: 98%;
+  height: 70%;
+  resize: none;
+  font-size: 1.2rem;
+}
+
+#sermon-takeaway {
+  width: 98%;
+  height: 30%;
+  resize: none;
+  font-size: 1.2rem;
+}
+
+.sermon-btns {
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+
+.sermon-saveBtn {
+  width: 100px;
+  height: 35px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(153, 153, 153);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.sermon-cancelBtn {
+  width: 100px;
+  height: 35px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(238, 34, 34);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.newSermon {
+  width: 100px;
+  height: 35px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: skyblue;
+  color: white;
+}
+
+.sermon-editBtn {
+  width: 100px;
+  height: 35px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: rgb(27, 161, 117);
+  color: white;
+}
+
+.sermon-output {
+  margin-left: 10px;
+  width: 50%;
+  height: 100%;
+  border: 2px solid rgb(198, 208, 198);
+  border-radius: 6px;
+}
+
+.sermon-output-body table {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.sermon-output-body table thead tr:nth-child(1) {
+  background-color: rgb(244, 236, 236);
+  font-weight: bold;
+}
+
+.sermon-output-body table td:nth-child(1) {
+  width: 15%;
+}
+
+.sermon-output-body table td:nth-child(2) {
+  width: 45%;
+}
+
+.sermon-output-body table td:nth-child(3) {
+  width: 25%;
+}
+
+.sermon-output-body table td:nth-child(4) {
+  width: 15%;
+}
+
+.sermon-list:hover {
+  background-color: rgb(253, 155, 125);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+/* 북마크 디자인 */
+.bookmark1,
+.bookmark2,
+.bookmark3,
+.bookmark4 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 30px;
+  z-index: 1;
+  opacity: 0.6;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+}
+
+.bookmark1 {
+  top: 17%;
+  background-color: red;
+}
+
+.bookmark2 {
+  top: 30%;
+  background-color: green;
+}
+
+.bookmark3 {
+  top: 43%;
+  background-color: blue;
+}
+
+.bookmark4 {
+  top: 56%;
+  background-color: rgb(172, 172, 0);
+}
+
+.bookmark1:hover,
+.bookmark2:hover,
+.bookmark3:hover,
+.bookmark4:hover {
+  opacity: 1;
+}
+
+
+
+/* 반응형 */
+@media (max-width: 420px) {
+  .show {
+    display: flex !important;
+  }
+
+  header .nav-btns {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 17rem;
+    width: 100%;
+    text-align: center;
+    flex-wrap: wrap;
+    z-index: 50;
+    display: none;
+  }
+
+  header .menu-btn {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  header .menu-btn a {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  header .menu-btn a:hover {
+    opacity: .8;
+    border: none;
+  }
+
+  header .login-btn {
+    margin: 0 auto;
+    gap: 15px;
+    margin-top: 5rem;
+    text-align: center;
+  }
+
+  header h1 a {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
+  .material-symbols-outlined {
+    display: block;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  main .wrapper form {
+    width: 100%;
+  }
+
+  #serachbible {
+    font-size: 1.2rem;
+    left: 0;
+    transform: none;
+  }
+
+  main .wrapper .input-btn {
+    display: none;
+  }
+
+  main .wrapper .random-paragraph h3::-webkit-scrollbar {
+    display: none;
+  }
+
+  main .wrapper .random-paragraph h3 {
+    font-size: 1.1rem;
+    overflow: auto;
+  }
+
+  main .wrapper .random-paragraph p {
+    font-size: .8rem;
+  }
+
+  main .wrapper .multi-contents {
+    gap: 20px;
+  }
+
+  main .wrapper .multi-contents .bible-game,
+  main .wrapper .multi-contents .pray-note {
+    height: 200px;
+  }
+
+  main .wrapper .multi-contents .bible-game h3,
+  main .wrapper .multi-contents .pray-note h3 {
+    font-size: 1.1rem;
+  }
+
+  .mobile-background {
+    width: 100%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, .8);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    display: none;
+  }
+
+  main .wrapper .book-title {
+    font-size: 1.1rem;
+  }
+
+  main .wrapper .scripture .bible-contents {
+    font-size: 1rem;
+  }
+
+  .source {
+    font-size: .8rem;
+    display: inline-block;
+    text-align: right;
+    position: relative;
+    left: 58%;
+    top: 8%;
+  }
+
+  main .wrapper .buttons {
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    top: -3px;
+  }
+
+  main .wrapper .buttons button {
+    font-size: 1rem;
+  }
+
+  .prev-button {
+    background-color: #fff;
+    color: #333;
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .next-button {
+    background-color: #fff;
+    color: #333;
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .prev-button:hover,
+  .next-button:hover {
+    background-color: #fff;
+  }
+
+
+  .prayBucketList-body{
+    font-size: 0.8rem;
+  }
+  .prayBucketList-input{
+    width: 100%;
+    margin-left: 0;
+    height: 50px;
+  }
+  .prayBucketList-input form input{
+    width: 100%;
+    height: 40px;
+    font-size: 0.8rem;
+  }
+  .Prayer-of-thanks-body {
+    font-size: 0.8rem;
+  }
+  .Prayer-of-thanks-input{
+    width: 100%;
+    height: 50px;
+    margin-left: 0;
+    font-size: 0.8rem;
+  }
+  .Prayer-of-thanks-input form input{
+    font-size: 0.8rem;
+    height: 40px;
+  }
+  .bookmark1, .bookmark2, .bookmark3, .bookmark4{
+    width: 85px;
+    height: 50px;
+    font-size: 0.8rem;
+    line-height: 50px;
+  }
+  .bookmark1{
+    top: 117px;
+    left: 5%;
+  }
+  .bookmark2{
+    top: 117px;
+    left: 29%;
+  }
+  .bookmark3{
+    top: 117px;
+    left: 53%;
+  }
+  .bookmark4{
+    top: 117px;
+    left: 77%;
+  }
+.prayDiary{
+  flex-direction: column;
+}
+.prayDiary-input form input{
+  font-size: 0.8rem;
+}
+.prayDiary-input form textarea{
+  font-size: 0.8rem;
+}
+.prayDiary-input form .btn-group {
+  justify-content: center;
+  margin-top: 0;
+}
+.prayDiary-output{
+  font-size: 0.8rem;
+}
+.scripture-board{
+  width: 92%;
+  flex-direction: column;
+  padding-bottom: 10rem;
+  padding-left: 0;
+}
+.scripture{
+  position: relative;
+  width: 100%;
+  height: 30%;
+  gap: 10px;
+}
+.scripture-1,
+.scripture-2,
+.scripture-3{
+  width: 100%;
+  font-size: 0.8rem;
+  border-radius: 0;
+}
+.sermon{
+  width: 100%;
+  flex-direction: column;
+}
+.sermon-input{
+  width: 100%;
+  margin-left: 0;
+}
+.sermon-input span{
+  font-size: 0.8rem;
+}
+.sermon-input form{
+  width: 98%;
+}
+.sermon-input form input{
+  width: 90%;
+  height: 30px;
+  font-size: 0.8rem;
+}
+#sermon-content{
+  height: 50%;
+  font-size: 0.8rem;
+}
+#sermon-takeaway{
+  height: 30%;
+  font-size: 0.8rem;
+}
+.sermon-output{
+  width: 100%;
+  margin-left: 0;
+  margin-top: 1rem;
+}
+.sermon-output-body{
+  font-size: 0.8rem;
+}
+.sermon-btns{
+  justify-content: center;
+}
+
+}

@@ -1,0 +1,300 @@
+  @import url(../css/reset.css);
+  @import url(../css/header.css);
+  /* @import url(../css/footer.css); */
+  body{
+    overflow-x: hidden;
+  }
+  
+  /* 메인파트 */
+  main{
+      width: 100%;
+  }
+  main .wrapper{
+      max-width: 80%;
+      height: 100%;
+      margin: 0 auto;
+  }
+  /* 성경읽기 페이지 컨텐츠부분 */
+  main .wrapper .scripture{
+    width: 100%;
+    height: 100%;
+    margin: 2rem 0;
+  }  
+
+  main .wrapper .scripture::-webkit-scrollbar {
+    width: 10px; /*스크롤바의 너비*/
+  }
+  main .wrapper .scripture::-webkit-scrollbar-thumb {
+   background-color: rgb(102, 102, 102); /*스크롤바의 색상*/
+   border-radius: 15rem;
+  }
+  main .wrapper .scripture::-webkit-scrollbar-thumb:active {
+    background-color: rgb(61, 53, 53);
+  }
+   
+  main .wrapper .scripture::-webkit-scrollbar-track {
+    background-color: rgb(194, 194, 194); /*스크롤바 트랙 색상*/
+    border-radius: 15rem;
+  }
+
+
+  main .wrapper .buttons{
+    width: 800px;
+    position: relative;
+    padding: 1rem 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  main .wrapper .buttons button{
+    margin: .2rem;
+    padding: .2rem .2rem;
+    width: 35px;
+    height: 35px;
+    margin-bottom: 3rem;
+    font-size: 1.3rem;
+    color: #333;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+  main .wrapper .buttons button:hover{
+    width: 35px;
+    height: 35px;
+    background-color: rgb(245, 197, 108);
+    color: #fff;
+    border-radius: 50%;
+  }
+  .active{ 
+    font-weight: 600;
+  }
+  .all-btn{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  .prev-button{  /* 이전페이지로 이동버튼 */
+    width: 50px;
+    height: 50px;
+    padding: .5rem .5rem;
+    margin-right: .5rem;
+    font-size: 1.5rem;
+    background-color: rgb(245, 197, 108);
+    border-radius: 50%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  .next-button{  /* 다음페이지로 이동버튼 */
+    width: 50px;
+    height: 50px;
+    padding: .5rem .5rem;
+    margin-left: .5rem;
+    font-size: 1.5rem;
+    background-color: rgb(245, 197, 108);
+    border-radius: 50%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  .prev-button:hover,
+  .next-button:hover{
+    background-color: rgb(240, 181, 73);
+  }
+
+  /* 출처표시 문구 */
+  .source{
+    display: inline-block;
+    text-align: right;
+    position: relative;
+    left: 81%;
+    top: 70px;
+  }
+
+  /* 성경목차 */
+  main .wrapper .scripture .scripture-list{  /* div */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 3rem 0;
+  }
+  main .wrapper .scripture .scripture-list ul{
+    margin: 0 1rem;
+  }
+  main .wrapper .scripture .scripture-list ul h3{
+    margin-bottom: 10px;
+  }
+  main .wrapper .scripture .scripture-list ul li{
+    list-style: none;
+    padding: 5px 0;
+  }
+  main .wrapper .scripture .scripture-list ul li a{
+    display: block;
+    background-color: rgb(255, 240, 221);
+    padding: 3px;
+  }
+  main .wrapper .scripture .scripture-list ul li a:hover{
+    background-color: rgb(245, 199, 138);
+    font-weight: 600;
+  }
+  /* 성경전문 */
+  main .wrapper .book-title{
+   font-size: 1.2rem;
+   margin-top: 3rem;
+  }
+  main .wrapper .scripture .bible-contents{
+    font-size: 1.1rem;
+    padding: 0.3rem 0;
+    color: #333;
+    border-bottom: 1px dotted rgb(135, 135, 135);
+    margin: 0 auto;
+  }
+.show{
+    display: block;
+}
+@media (max-width: 420px) {
+    .show{
+        display: flex !important;
+    }
+
+    header .nav-btns{
+      position: absolute;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 17rem;
+      width: 100%;
+      text-align: center;
+      flex-wrap: wrap;
+      z-index: 50;
+      display: none;
+  }
+  header .menu-btn{
+      margin: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  }
+  header .menu-btn a{
+      margin-left: 0;
+      width: 100%;
+  }
+  header .menu-btn a:hover{
+    opacity: .8;
+    border: none;
+}
+  header .login-btn{
+      margin: 0 auto;
+      gap: 15px;
+      margin-top: 5rem;
+      text-align: center;
+  }
+    header h1 a{
+        font-size: 1.5rem;
+        color: #fff;
+    }
+    .material-symbols-outlined{
+        display: block;
+        color: #fff;
+        cursor: pointer;
+    }
+    main .wrapper form{
+        width: 100%;
+    }
+    #serachbible{
+        font-size: 1.2rem;
+        left: 0;
+        transform: none;
+    }
+    main .wrapper .input-btn{
+        display: none;
+    }
+    main .wrapper .random-paragraph h3::-webkit-scrollbar {
+        display: none;
+      }
+    main .wrapper .random-paragraph h3{
+        font-size: 1.1rem;
+        overflow: auto;
+    }
+    main .wrapper .random-paragraph p{
+        font-size: .8rem;
+    }
+    main .wrapper .multi-contents {
+        gap: 20px;
+    }
+    main .wrapper .multi-contents .bible-game,
+    main .wrapper .multi-contents .pray-note{
+        height: 200px;
+    }
+    main .wrapper .multi-contents .bible-game h3,
+    main .wrapper .multi-contents .pray-note h3{
+        font-size: 1.1rem;
+    }
+    .mobile-background{
+        width: 100%;
+        height: 500px;
+        background-color: rgba(0,0,0,.8);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        display: none;
+    }
+    main .wrapper .scripture .scripture-list{
+      padding: 0;
+    }
+    main .wrapper .scripture .scripture-list ul li a:hover{
+      background-color: rgb(245, 199, 138);
+    }
+
+    main .wrapper .book-title{
+      font-size: 1.1rem;
+     }
+     main .wrapper .scripture .bible-contents{
+      font-size: 1rem;
+    }
+     .source{
+      font-size: .6rem;
+      display: inline-block;
+      text-align: right;
+      position: relative;
+      left: 64%;
+      top: 47px;
+    }
+
+    main .wrapper .buttons{
+      width: 100%;
+      height: 100%;
+      font-size: 1rem;
+      top: -3px;
+    }
+    main .wrapper .buttons button{
+      font-size: 1rem;
+    }
+    main .wrapper .book-title{
+      margin-top: 1.5rem;
+     }
+    .prev-button{
+      width: 30px;
+      height: 30px;
+      padding: 1px 1px;
+      font-size: 1rem;
+      font-family: Arial, sans-serif; /* 화살표가 있는 폰트 사용 */
+      margin: 0;
+      margin-top: 12px;
+    }
+    .next-button{
+      width: 30px;
+      height: 30px;
+      padding: 1px 1px;
+      font-size: 1rem;
+      font-family: Arial, sans-serif; /* 화살표가 있는 폰트 사용 */
+      margin: 0;
+      margin-top: 12px;
+    }
+    .scripture-list{
+      font-size: 0.8rem;
+    }
+
+}

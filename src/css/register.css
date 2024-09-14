@@ -1,0 +1,200 @@
+@import url(../css/reset.css);
+@import url(../css/header.css);
+@import url(../css/footer.css);
+
+main {
+  height: calc(100% - 250px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-section {
+  width: 400px;
+  height: 600px;
+  box-shadow: 2px 5px 5px 2px;
+  border-radius: 2rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.register-section h2 {
+  font-family: "Russo One", sans-serif;
+  font-size: 2rem;
+}
+
+.name input,
+.email input,
+.mobile input,
+.userId input,
+.userPw input,
+.userPwCheck input   
+{
+  height: 30px;
+  padding: 0 5px;
+  font-size: 1.1rem;
+  outline: none;
+  border: 1px solid rgb(135, 135, 135);
+}
+.submit button {
+  width: 200px;
+  height: 40px;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  border: none;
+  color: #fff;
+  background-color: rgb(23, 70, 158);
+  border-radius: 6px;
+  cursor: pointer;
+}
+.submit button:hover {
+  background-color: rgb(44, 104, 214);
+}
+.register-section .login-find a {
+  margin-right: 1rem;
+  font-size: 0.8rem;
+  /* background-color: red; */
+}
+.register-section .login-find a:hover {
+  border-bottom: 1px solid rgb(135, 135, 135);
+  opacity: 0.5;
+}
+@media (max-width: 420px) {
+  .show {
+    display: flex !important;
+  }
+
+  header .nav-btns {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 17rem;
+    width: 100%;
+    text-align: center;
+    flex-wrap: wrap;
+    z-index: 50;
+    display: none;
+  }
+  header .menu-btn {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  header .menu-btn a {
+    margin-left: 0;
+    width: 100%;
+  }
+  header .menu-btn a:hover {
+    opacity: 0.8;
+    border: none;
+  }
+  header .login-btn {
+    margin: 0 auto;
+    gap: 15px;
+    margin-top: 5rem;
+    text-align: center;
+  }
+  header h1 a {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  .material-symbols-outlined {
+    display: block;
+    color: #fff;
+    cursor: pointer;
+  }
+  main .wrapper form {
+    width: 100%;
+  }
+  #serachbible {
+    font-size: 1.2rem;
+    left: 0;
+    transform: none;
+  }
+  main .wrapper .input-btn {
+    display: none;
+  }
+  main .wrapper .random-paragraph h3::-webkit-scrollbar {
+    display: none;
+  }
+  main .wrapper .random-paragraph h3 {
+    font-size: 1.1rem;
+    overflow: auto;
+  }
+  main .wrapper .random-paragraph p {
+    font-size: 0.8rem;
+  }
+  main .wrapper .multi-contents {
+    gap: 20px;
+  }
+  main .wrapper .multi-contents .bible-game,
+  main .wrapper .multi-contents .pray-note {
+    height: 200px;
+  }
+  main .wrapper .multi-contents .bible-game h3,
+  main .wrapper .multi-contents .pray-note h3 {
+    font-size: 1.1rem;
+  }
+  .mobile-background {
+    width: 100%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    display: none;
+  }
+  main .wrapper .book-title {
+    font-size: 1.1rem;
+  }
+  main .wrapper .scripture .bible-contents {
+    font-size: 1rem;
+  }
+  .source {
+    font-size: 0.8rem;
+    display: inline-block;
+    text-align: right;
+    position: relative;
+    left: 58%;
+    top: 8%;
+  }
+
+  main .wrapper .buttons {
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    top: -3px;
+  }
+  main .wrapper .buttons button {
+    font-size: 1rem;
+  }
+  .prev-button {
+    background-color: #fff;
+    color: #333;
+    font-size: 1rem;
+    margin: 0;
+  }
+  .next-button {
+    background-color: #fff;
+    color: #333;
+    font-size: 1rem;
+    margin: 0;
+  }
+  .prev-button:hover,
+  .next-button:hover {
+    background-color: #fff;
+  }
+  
+  /* .register-section을 동적으로 그릴 때 css가 안먹히는거 같다 */
+  .register-section{
+    width: 80%;
+    height: 90%;
+  }
+}

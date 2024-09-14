@@ -1,0 +1,467 @@
+@charset "UTF-8";
+@import url(../css/reset.css);
+@import url(../css/footer.css);
+
+/* @import url(../css/mobile.css); */
+header {
+  width: 100vw;
+  height: 100px;
+  position: absolute;
+  z-index: 25;
+}
+
+header nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-shrink: 1;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+header h1 a {
+  font-family: "Russo One", sans-serif;
+  font-size: 2rem;
+  color: #fff;
+}
+
+header .nav-btns {
+  display: flex;
+  align-items: center;
+}
+
+header .menu-btn {
+  margin-right: 5rem;
+}
+
+header .menu-btn a {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  padding: 0 1rem;
+  gap: 130px;
+}
+
+header .menu-btn a:hover {
+  opacity: 0.8;
+  border-bottom: 3px solid #fff;
+}
+
+header .login-btn {
+  display: flex;
+  flex-shrink: 1;
+  gap: 20px;
+}
+
+header .login-btn a {
+  font-size: 1.1rem;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 3rem;
+  padding: 0.2rem 1rem;
+}
+
+header .login-btn a:hover {
+  background-color: #fff;
+  color: #333;
+  font-weight: 600;
+}
+
+.material-symbols-outlined {
+  display: none;
+}
+
+.background {
+  position: relative;
+  height: 400px;
+  background-image: url(../asssets/imgs/pine.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  top: 0;
+}
+
+.background::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+}
+
+main .wrapper {
+  max-width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+main .wrapper form {
+  width: 50rem;
+  height: 100px;
+  display: flex;
+  flex-shrink: 1;
+  margin: 0 auto;
+}
+
+main .wrapper input {
+  width: 50rem;
+  height: 3.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  padding: 0.2rem 1rem;
+  outline: none;
+  position: relative;
+  bottom: 8rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+main .wrapper input:focus {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+main .wrapper .random-paragraph {
+  width: 100%;
+  height: 200px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+main .wrapper .random-paragraph h3 {
+  max-width: 80%;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Noto Serif KR", serif;
+  position: relative;
+  z-index: 2;
+}
+
+main .wrapper .random-paragraph::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+main .wrapper .random-paragraph p {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: "Noto Serif KR", serif;
+}
+
+main .wrapper .multi-contents {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 5rem 0;
+  perspective: 1000px;
+}
+
+main .wrapper .multi-contents .bible-reading,
+main .wrapper .multi-contents .bible-paragraph,
+main .wrapper .multi-contents .bible-game,
+main .wrapper .multi-contents .pray-note {
+  display: flex;
+  justify-content: center;
+  width: 330px;
+  height: 400px;
+  border: 1px solid #c4c4c4;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  transform-style: preserve-3d;
+  /* 자식 요소의 3D 변환 유지 */
+  transition: transform 0.5s;
+  /* 변환 효과에 대한 transition 추가 */
+}
+
+main .wrapper .multi-contents .bible-reading {
+  background-color: rgb(250, 243, 243);
+}
+
+main .wrapper .multi-contents .bible-paragraph {
+  background-color: rgb(250, 243, 243);
+}
+
+main .wrapper .multi-contents .bible-game {
+  background-color: rgb(250, 243, 243);
+}
+
+main .wrapper .multi-contents .pray-note {
+  background-color: rgb(250, 243, 243);
+}
+
+.bible-reading-div,
+.bible-paragraph-div,
+.bible-game-div,
+.pray-note-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* padding-top: 7rem; */
+  align-items: center;
+  gap: 10px;
+}
+
+.bible-reading-div img,
+.bible-paragraph-div img,
+.bible-game-div img,
+.pray-note-div img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+}
+
+/* 스크롤바 꾸미기 - 시작 */
+::-webkit-scrollbar {
+  width: 18px;
+  /*스크롤바의 너비*/
+  height: 0;
+  cursor: help;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(187, 187, 187);
+  /*스크롤바의 색상*/
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: rgb(61, 53, 53);
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(214, 214, 214);
+  /*스크롤바 트랙 색상*/
+}
+
+/* 스크롤바 꾸미기 - 끝*/
+.loading-Phrases {
+  display: block;
+  width: 300px;
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bible-game,
+.bible-paragraph,
+.bible-reading,
+.pray-note {
+  cursor: pointer;
+
+}
+
+.bible-game:hover,
+.bible-paragraph:hover,
+.bible-reading:hover,
+.pray-note:hover {
+  transform: rotateY(180deg);
+}
+
+.bible-reading:hover {
+  transform: rotateY(180deg);
+  background-image: url("../asssets/imgs/bible2.jpg");
+}
+
+.bible-paragraph:hover {
+  background-image: url("../asssets/imgs/paragraphBg1.jpg");
+}
+
+.bible-game:hover {
+  background-image: url("../asssets/imgs/typewriter.jpg");
+}
+
+.pray-note:hover {
+  background-image: url("../asssets/imgs/praynote.jpg");
+}
+
+.bible-reading:hover h3,
+.bible-game:hover h3,
+.bible-paragraph:hover h3,
+.pray-note:hover h3 {
+  color: #fff;
+  position: absolute;
+  top: 20%;
+  transform: rotateY(180deg);
+}
+
+.bible-reading:hover .bible-reading-div img,
+.bible-paragraph:hover .bible-paragraph-div img,
+.bible-game:hover .bible-game-div img,
+.pray-note:hover .pray-note-div img {
+  display: none;
+}
+
+.bible-game h3,
+.pray-note h3,
+.bible-paragraph h3,
+.bible-reading h3 {
+  font-size: 2rem;
+  text-align: center;
+  color: #000000;
+}
+
+
+.show {
+  display: block;
+}
+
+@media (max-width: 420px) {
+  .show {
+    display: flex !important;
+  }
+
+  .background {
+    height: 250px;
+  }
+
+  header .nav-btns {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 17rem;
+    width: 100%;
+    text-align: center;
+    flex-wrap: wrap;
+    z-index: 50;
+    display: none;
+  }
+
+  header .menu-btn {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  header .menu-btn a {
+    width: 100%;
+  }
+
+  header .menu-btn a:hover {
+    opacity: 0.8;
+    border: none;
+  }
+
+  header .login-btn {
+    margin: 0 auto;
+    gap: 15px;
+    margin-top: 5rem;
+    text-align: center;
+  }
+
+  header h1 a {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
+  .material-symbols-outlined {
+    display: block;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  body {
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  main {
+    height: 100%;
+  }
+
+  .contents {
+    height: 100%;
+  }
+
+  main .wrapper form {
+    width: 100%;
+  }
+
+  #serachbible {
+    font-size: 1.2rem;
+    left: 0;
+    transform: none;
+  }
+
+  main .wrapper .input-btn {
+    display: none;
+  }
+
+  main .wrapper .random-paragraph h3::-webkit-scrollbar {
+    display: none;
+  }
+
+  main .wrapper .random-paragraph h3 {
+    font-size: 1rem;
+    overflow: auto;
+  }
+
+  main .wrapper .random-paragraph p {
+    font-size: 0.8rem;
+  }
+
+  main .wrapper .multi-contents {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  main .wrapper .multi-contents .bible-reading, 
+  main .wrapper .multi-contents .bible-paragraph, 
+  main .wrapper .multi-contents .bible-game, 
+  main .wrapper .multi-contents .pray-note {
+    width: 250px;
+  }
+
+  main .wrapper .multi-contents .bible-game h3,
+  main .wrapper .multi-contents .pray-note h3,
+  main .wrapper .multi-contents .bible-paragraph h3,
+  main .wrapper .multi-contents .bible-reading h3 {
+    font-size: 1.5rem;
+  }
+
+  .mobile-background {
+    width: 100%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    display: none;
+  }
+
+}
+
+/*# sourceMappingURL=style.css.map */

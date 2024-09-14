@@ -1,0 +1,245 @@
+@import url(../css/reset.css);
+@import url(../css/header.css);
+
+main {
+  width: 100vw;
+  max-width: 80%;
+  margin: 0 auto;
+}
+.bible-title {
+  font-size: 1.5rem;
+  color: rgb(97, 96, 96);
+  font-family: "Noto Serif KR", serif;
+  margin-bottom: 1rem;
+}
+.bible-content {
+  /* border: 1px solid #333; */
+  width: 100%;
+  height: 100%;
+  margin: 3rem auto;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding-bottom: 3rem;
+}
+.bible-content form {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.bible-content p {
+  font-family: "Noto Serif KR", serif;
+  font-size: 1.5rem;
+  color: rgb(160, 160, 160);
+  line-height: 1.5;
+  margin: 1rem 0;
+  position: relative;
+  display: inline;
+}
+.bible-content span {
+  font-family: "Noto Serif KR", serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.textarea-value {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  font-size: 1.5rem;
+  color: #333;
+  line-height: 1.5;
+  font-family: "Noto Serif KR", serif;
+  z-index: 10;
+  white-space: wrap;
+  word-break: break-all; /*글자가 div밖으로 못나가도록설정*/
+}
+.textWindow {
+  position: absolute;
+  top: 0;
+  background-color: transparent;
+  font-family: "Noto Serif KR", serif;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  color: transparent;
+  caret-color: rgb(0, 0, 0);
+  border: none;
+  line-height: 1.5;
+  resize: none;
+  outline: none;
+  white-space: wrap;
+  overflow: hidden;
+  z-index: 15;
+}
+.textWindow::placeholder {
+  height: 100%;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 150px;
+}
+.textWindow:focus::placeholder {
+  color: transparent;
+}
+.correct {
+  color: #333;
+  font-weight: 600;
+  font-family: "Noto Serif KR", serif;
+}
+.incorrect {
+  color: rgb(236, 61, 61);
+  font-weight: 600;
+  border-bottom: 2px solid rgb(236, 61, 61);
+}
+/* 버튼 */
+.btn-group {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+.prev {
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  margin-right: 0.6rem;
+  z-index: 15;
+}
+.prev:hover,
+.next:hover {
+  background-color: #e4e0e0;
+}
+.next {
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  margin-right: 1rem;
+  z-index: 15;
+}
+.retry {
+  width: 60px;
+  height: 30px;
+  background-color: rgb(129, 129, 253);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  z-index: 15;
+}
+.retry:hover {
+  background-color: rgb(96, 96, 250);
+}
+.hide {
+  opacity: 0;
+}
+/* 셀렉트 옵션부분 */
+select {
+  width: 300px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+}
+.show {
+  display: block;
+}
+@media (max-width: 615px) {
+  select {
+    bottom: 35px;
+  }
+}
+@media (max-width: 420px) {
+  .show {
+    display: flex !important;
+  }
+  header {
+    z-index: 30;
+  }
+  header .nav-btns {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 17rem;
+    width: 100%;
+    text-align: center;
+    flex-wrap: wrap;
+    z-index: 50;
+    display: none;
+  }
+  header .menu-btn {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  header .menu-btn a {
+    margin-left: 0;
+    width: 100%;
+  }
+  header .menu-btn a:hover {
+    opacity: 0.8;
+    border: none;
+  }
+  header .login-btn {
+    margin: 0 auto;
+    gap: 15px;
+    margin-top: 5rem;
+    text-align: center;
+  }
+  header h1 a {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  .material-symbols-outlined {
+    display: block;
+    color: #fff;
+    cursor: pointer;
+  }
+  main .wrapper form {
+    width: 100%;
+  }
+  #serachbible {
+    font-size: 1.2rem;
+    left: 0;
+    transform: none;
+  }
+
+  main .wrapper .input-btn {
+    display: none;
+  }
+  main .wrapper .random-paragraph h3::-webkit-scrollbar {
+    display: none;
+  }
+  main .wrapper .random-paragraph h3 {
+    font-size: 1.1rem;
+    overflow: auto;
+  }
+  main .wrapper .random-paragraph p {
+    font-size: 0.8rem;
+  }
+  main .wrapper .multi-contents {
+    gap: 20px;
+  }
+  main .wrapper .multi-contents .bible-game,
+  main .wrapper .multi-contents .pray-note {
+    height: 200px;
+  }
+  main .wrapper .multi-contents .bible-game h3,
+  main .wrapper .multi-contents .pray-note h3 {
+    font-size: 1.1rem;
+  }
+  .mobile-background {
+    width: 100%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    display: none;
+  }
+}

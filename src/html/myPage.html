@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>MyPage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&family=Noto+Serif+KR:wght@200;300;400;500;600&family=Russo+One&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+      <link rel="stylesheet" href="../css/myPage.css">
+      <script type="module" src="../js/header.js" defer></script>
+      <script type='module' src="../js/myPage.js" defer></script>
+      <script>
+        const redirectPage = () => {
+         const isLoggedIn = localStorage.getItem('로그인상태')
+         if(!isLoggedIn) {    
+           alert("로그인이 필요한 서비스입니다.");
+           location.href = "login.html";
+       }
+         else{location.href = "prayNote.html";}
+       };
+     </script>
+</head>
+<body>
+    <!-- 헤더파트 -->
+    <!-- header.js 모듈업로드 -->
+    <div class="background"></div>
+    <!-- 메인파트 -->
+    <main>
+      <div class="myPage">
+       <form class="myPage-section">
+        <h2>회원가입</h2>
+        <div class="name">
+          <h4>이름</h4>
+        </div>
+        <div class="mobile">
+          <h4>휴대폰번호</h4>
+        </div>
+        <div class="email">
+          <h4>아이디(Email)</h4>
+        </div>
+        <div class="userPw">
+          <h4>비밀번호 변경</h4>
+          <input type="password" class="newPassword" placeholder="비밀번호를 입력하세요" required />
+        </div>
+        <div class="userPwCheck">
+          <h4>비밀번호 확인</h4>
+          <input type="password"  class="newPassword-confirm" placeholder="비밀번호를 다시 입력하세요" required />
+        </div>
+       
+        <div class="myPage-btns">
+            <button type="button" class="myPage-btn-edit" disabled>수정하기</button>
+            <button type="button" class="myPage-btn-cancle">취소</button>
+            <button type="button" class="myPage-btn-withdraw">탈퇴하기</button>
+        </div>
+      </form>
+     </div>
+    </main>
+    <div class="mobile-background"></div>
+</body>
+</html>

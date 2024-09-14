@@ -1,0 +1,93 @@
+
+.findUserPwField h4{
+    font-size: 1rem;
+}
+.findUserPwField form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 450px;
+    gap: 1.2rem;
+    box-shadow: 2px 5px 5px 2px;
+    border-radius: 2rem;
+}
+.findUserPwField form input{
+    height: 30px;
+    padding: 0 5px;
+    font-size: 1.1rem;
+    outline: none;
+    border: 1px solid rgb(135, 135, 135);
+}
+.findUserPwField form h2 {
+    font-family: "Russo One", sans-serif;
+    font-size: 2rem;
+  }
+
+.findUserPwField .bottom-btns {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+}
+  .findUserPwField .bottom-btns a:hover {
+    border-bottom: 1px solid rgb(135, 135, 135);
+    opacity: 0.5;
+  }
+  .mobile-section{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-left: 75px;
+  }
+  .mobile-number, .authNumber-section{
+    display: flex;
+    gap: 5px;
+  }
+  .mobile-section button{
+    width: 70px;
+    height: 30px;
+  }
+  
+  .findPw-btn button{
+    width: 245px;
+    height: 40px;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    border: none;
+    color: #fff;
+    background-color: rgb(23, 70, 158);
+    border-radius: 6px;
+    cursor: pointer;
+  }
+    .findPw-btn button:hover {
+        background-color: rgb(44, 104, 214);
+    }
+   .sendNewPw-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+   }
+   .sendNewPw-section h2{
+    font-size: 2.5rem;
+   }
+   .sendNewPw-section h4{
+    font-size: 1.5rem;
+    font-weight: 500;
+   }
+   .login-btns a{
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #1013b1;
+  }
+  .login-btns a:hover{
+      text-decoration: underline;
+  }
+
+  @media(max-width :420px){
+    .findUserPwField form {
+        width: 320px;
+        height: 320px;
+    }
+  }

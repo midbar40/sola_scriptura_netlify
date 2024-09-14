@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>성경읽기</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&family=Noto+Serif+KR:wght@200;300;400;500;600&family=Russo+One&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="../css/readbible.css" />
+  <script type="module" src="../js/header.js" defer></script>
+  <script type="module" src="../js/readebible.js" defer></script>
+  <script>
+    const redirectPage = () => {
+     const isLoggedIn = localStorage.getItem('로그인상태')
+     if(!isLoggedIn) {    
+       alert("로그인이 필요한 서비스입니다.");
+       location.href = "login.html";
+   }
+     else{location.href = "prayNote.html";}
+   };
+ </script>
+</head>
+
+<body>
+  <!-- 헤더파트 -->
+  <!-- header.js 모듈업로드 -->
+  <div class="background"></div>
+  <!-- 메인파트 -->
+  <main>
+    <div class="wrapper">
+      <div class="scripture">
+        <div class="scripture-list">
+          <ul class="old-testament">
+            <h3>구약</h3>
+            <li><a href="#" class="book" id="1">창세기 (Genesis)</a></li>
+            <li><a href="#" class="book" id="2">출애굽기 (Exodus)</a></li>
+            <li><a href="#" class="book" id="3">레위기 (Leviticus)</a></li>
+            <li><a href="#" class="book" id="4">민수기 (Numbers)</a></li>
+            <li><a href="#" class="book" id="5">신명기 (Deuteronomy)</a></li>
+            <li><a href="#" class="book" id="6">여호수아 (Joshua)</a></li>
+            <li><a href="#" class="book" id="7">사사기 (Judges)</a></li>
+            <li><a href="#" class="book" id="8">룻기 (Ruth)</a></li>
+            <li><a href="#" class="book" id="9">사무엘상 (1 Samuel)</a></li>
+            <li><a href="#" class="book" id="10">사무엘하 (2 Samuel)</a></li>
+            <li><a href="#" class="book" id="11">열왕기상 (1 Kings)</a></li>
+            <li><a href="#" class="book" id="12">열왕기하 (2 Kings)</a></li>
+            <li>
+              <a href="#" class="book" id="13">역대상 (1 Chronicles)</a>
+            </li>
+            <li>
+              <a href="#" class="book" id="14">역대하 (2 Chronicles)</a>
+            </li>
+            <li><a href="#" class="book" id="15">에스라 (Ezra)</a></li>
+            <li><a href="#" class="book" id="16">느헤미야 (Nehemiah)</a></li>
+            <li><a href="#" class="book" id="17">에스더 (Esther)</a></li>
+            <li><a href="#" class="book" id="18">욥기 (Job)</a></li>
+            <li><a href="#" class="book" id="19">시편 (Psalms)</a></li>
+            <li><a href="#" class="book" id="20">잠언 (Proverbs)</a></li>
+            <li>
+              <a href="#" class="book" id="21">전도서 (Ecclesiastes)</a>
+            </li>
+            <li><a href="#" class="book" id="22">아가 (Song of Songs)</a></li>
+            <li><a href="#" class="book" id="23">이사야 (Isaiah)</a></li>
+            <li><a href="#" class="book" id="24">예레미야 (Jeremiah)</a></li>
+            <li>
+              <a href="#" class="book" id="25">예레미야 애가 (Lamentations)</a>
+            </li>
+            <li><a href="#" class="book" id="26">에스겔 (Ezekiel)</a></li>
+            <li><a href="#" class="book" id="27">다니엘 (Daniel)</a></li>
+            <li><a href="#" class="book" id="28">호세아 (Hosea)</a></li>
+            <li><a href="#" class="book" id="29">요엘 (Joel)</a></li>
+            <li><a href="#" class="book" id="30">아모스 (Amos)</a></li>
+            <li><a href="#" class="book" id="31">오바댜 (Obadiah)</a></li>
+            <li><a href="#" class="book" id="32">요나 (Jonah)</a></li>
+            <li><a href="#" class="book" id="33">미가 (Micah)</a></li>
+            <li><a href="#" class="book" id="34">나훔 (Nahum)</a></li>
+            <li><a href="#" class="book" id="35">하박국 (Habakkuk)</a></li>
+            <li><a href="#" class="book" id="36">스바냐 (Zephaniah)</a></li>
+            <li><a href="#" class="book" id="37">학개 (Haggai)</a></li>
+            <li><a href="#" class="book" id="38">스가랴 (Zechariah)</a></li>
+            <li><a href="#" class="book" id="39">말라기 (Malachi)</a></li>
+          </ul>
+
+          <ul class="new-testament">
+            <h3>신약</h3>
+            <li><a href="#" class="book" id="40">마태복음 (Matthew)</a></li>
+            <li><a href="#" class="book" id="41">마가복음 (Mark)</a></li>
+            <li><a href="#" class="book" id="42">누가복음 (Luke)</a></li>
+            <li><a href="#" class="book" id="43">요한복음 (John)</a></li>
+            <li><a href="#" class="book" id="44">사도행전 (Acts)</a></li>
+            <li><a href="#" class="book" id="45">로마서 (Romans)</a></li>
+            <li>
+              <a href="#" class="book" id="46">고린도전서 (1 Corinthians)</a>
+            </li>
+            <li>
+              <a href="#" class="book" id="47">고린도후서 (2 Corinthians)</a>
+            </li>
+            <li>
+              <a href="#" class="book" id="48">갈라디아서 (Galatians)</a>
+            </li>
+            <li><a href="#" class="book" id="49">에베소서 (Ephesians)</a></li>
+            <li>
+              <a href="#" class="book" id="50">빌립보서 (Philippians)</a>
+            </li>
+            <li>
+              <a href="#" class="book" id="51">골로새서 (Colossians)</a>
+            </li>
+            <li>
+              <a href="#" class="book" id="52">데살로니가전서 (1 Thessalonians)</a>
+            </li>
+            <li>
+              <a href="#" class="book" id="53">데살로니가후서 (2 Thessalonians)</a>
+            </li>
+            <li>
+              <a href="#" class="book" id="54">디모데전서 (1 Timothy)</a>
+            </li>
+            <li>
+              <a href="#" class="book" id="55">디모데후서 (2 Timothy)</a>
+            </li>
+            <li><a href="#" class="book" id="56">디도서 (Titus)</a></li>
+            <li><a href="#" class="book" id="57">빌레몬서 (Philemon)</a></li>
+            <li><a href="#" class="book" id="58">히브리서 (Hebrews)</a></li>
+            <li><a href="#" class="book" id="59">야고보서 (James)</a></li>
+            <li><a href="#" class="book" id="60">베드로전서 (1 Peter)</a></li>
+            <li><a href="#" class="book" id="61">베드로후서 (2 Peter)</a></li>
+            <li><a href="#" class="book" id="62">요한1서 (1 John)</a></li>
+            <li><a href="#" class="book" id="63">요한2서 (2 John)</a></li>
+            <li><a href="#" class="book" id="64">요한3서 (3 John)</a></li>
+            <li><a href="#" class="book" id="65">유다서 (Jude)</a></li>
+            <li>
+              <a href="#" class="book" id="66">요한계시록 (Revelation)</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 이곳에 json파일 가져와야함 -->
+      <div class="all-btn">
+        <div class="buttons"></div>
+      </div>
+    </div>
+  </main>
+  <div class="mobile-background"></div>
+</body>
+
+</html>
