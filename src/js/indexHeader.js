@@ -58,22 +58,16 @@ export function indexHeaderModule(isLoggedIn) {
         header.appendChild(nav)
         if (document.querySelector('.login-btn')) {
             document.querySelector('.login-btn').addEventListener('click', () => {
-                window.location.href = 'https://www.closetogod.site/bible-front/html/login.html'
-                // window.location.href = 'https://midbar40.github.io/bible-front/html/login.html'
+                window.location.href = 'https://closetogod.site/html/login.html'
             })
         }
-        // document.addEventListener('click', function (e) {
-        //     if (e.target.innerText === '기도노트') {
-        //         alert('로그인이 필요한 서비스입니다.')
-        //     }
-        // })
+
     }
     return header
 }
 
 export async function logout(e) {
     if (e.target.innerText == '로그아웃') {
-        // await fetch('https://port-0-bible-server-32updzt2alphmfpdy.sel5.cloudtype.app/api/users/logout', {
         await fetch('https://backend.closetogod.site/api/users/logout', {
             method: 'POST',
             credentials: 'include',
@@ -87,7 +81,6 @@ export async function logout(e) {
                     localStorage.removeItem('로그인상태')
                     localStorage.removeItem('유저이름')
                     window.location.href = 'https://www.closetogod.site/index.html'
-                    // window.location.href = 'http://127.0.0.1:5500/bible-front/index.html'
 
                 }
             })

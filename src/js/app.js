@@ -3,7 +3,7 @@
 // 전역변수
 const inputWindow = document.getElementById('serachbible')
 const ramdomPargraph = document.querySelector('.random-paragraph')
-import a from '../../netlify/.netlify/functions-internal/'
+
 // 헤더 모듈 가져오기
 function checkIsLogined() {
     {
