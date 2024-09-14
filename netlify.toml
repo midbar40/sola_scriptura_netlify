@@ -1,16 +1,2 @@
-[functions]
-external_node_modules = ["express"]
-node_bundler = "esbuild"
-
-[[plugins]]
-package = "@netlify/plugin-functions-install-core"
-
 [build]
-  publish = "./src"  
-
-[[redirects]]
-  force = true
-  from = "/api/*"
-  status = 200
-  to = "/.netlify/functions/api/:splat"
-
+functions=“functions”
