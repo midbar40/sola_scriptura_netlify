@@ -10,10 +10,10 @@ const {
     validateUserMobile,
     validateUserEmail,
     validateUserPassword
-} = require('../../validator')
+} = require('./validator')
 
 // 토큰 생성
-const { generateToken } = require('../../auth')
+const { generateToken } = require('./auth.mjsauth')
 
 // 비밀번호 암호화(해싱)
 const bcrypt = require('bcrypt')
