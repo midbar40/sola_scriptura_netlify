@@ -1,6 +1,6 @@
 const express = require('express')
 const serverless = require('serverless-http');
-const api = express()
+const app = express()
 const logger = require('morgan')
 const mongoose = require('mongoose')
 const cors = require('cors')
@@ -30,36 +30,36 @@ let corsOptions = {
 }
 
 // 공통 미들웨어
-api.use(cors(corsOptions)) // cors 설정, 이걸 계속 빼먹네..
-api.use(express.json()) //request body 파싱 
-api.use(logger('tiny')) // logger 설정
-api.use(cookieParser())
+app.use(cors(corsOptions)) // cors 설정, 이걸 계속 빼먹네..
+app.use(express.json()) //request body 파싱 
+app.use(logger('tiny')) // logger 설정
+app.use(cookieParser())
 
 // 라우터 설정
-api.use('/api/bible', biblesRouter)
-api.use('/api/users', usersRouter)
-api.use('/api/prayBucketlist', prayBucketlistRouter)
-api.use('/api/grace', graceRouter)
-api.use('/api/prayDiary', prayDiaryRouter)
-api.use('/api/pickPosts', pickPostRouter)
-api.use('/api/bibleParagraphs', bibleParagraphsRouter)
-api.use('/api/sermon', sermonRouter)
-api.use('/api/otp', otpRouter)
+app.use('/api/bible', biblesRouter)
+app.use('/api/users', usersRouter)
+app.use('/api/prayBucketlist', prayBucketlistRouter)
+app.use('/api/grace', graceRouter)
+app.use('/api/prayDiary', prayDiaryRouter)
+app.use('/api/pickPosts', pickPostRouter)
+app.use('/api/bibleParagraphs', bibleParagraphsRouter)
+app.use('/api/sermon', sermonRouter)
+app.use('/api/otp', otpRouter)
 
 // fallback handler
-api.use((req, res, next) => { // 사용자가 요청한 페이지가 없는 경우 에러처리
+app.use((req, res, next) => { // 사용자가 요청한 페이지가 없는 경우 에러처리
     res.status(404).send('페이지를 찾을 수 없습니다.')
 })
-api.use((err, req, res, next) => { // 서버 내부 오류 처리
+app.use((err, req, res, next) => { // 서버 내부 오류 처리
     console.error(err.stack)
     res.status(500).send('서버에 문제가 발생하였습니다.')
 })
 
 const port = process.env.PORT || 8080;
-api.listen(port, () => { /* 서버실행 */
+app.listen(port, () => { /* 서버실행 */
     console.log(`Now listening on port ${port}`)
 })
 
-export const handler = serverless(api);
+module.exports.handler = serverless(app);
 
 
