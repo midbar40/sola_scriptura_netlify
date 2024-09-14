@@ -1,4 +1,4 @@
-import connectDb from './dbConnect'
+import {connectDb} from './dbConnect'
 import BibleParagraph from '../models/BibleParagraph'
 import mongoose from 'mongoose'
 
@@ -16,5 +16,3 @@ export const handler = async (event, context) => {
     }
 };
 
-[functions]
-external_node_modules = ["jsonwebtoken", "mongoose", "dotenv"]
