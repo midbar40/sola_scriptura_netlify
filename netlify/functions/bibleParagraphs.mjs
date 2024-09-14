@@ -16,3 +16,5 @@ export const handler = async (event, context) => {
     }
 };
 
+[functions]
+external_node_modules = ["jsonwebtoken", "mongoose", "dotenv"]
