@@ -4,7 +4,7 @@ import mongoose from 'mongoose'
 
 const { Types: { ObjectId } } = mongoose
 
-exports.handler = async (event, context) => {
+export const handler = async (event, context) => {
     await connectDb()
     const { category } = event.path.split('/').pop(); // 마지막 경로 파라미터를 추출
     console.log('category :', category)
