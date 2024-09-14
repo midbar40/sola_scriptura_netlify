@@ -9,15 +9,15 @@ const cookieParser = require('cookie-parser')
 
 
 // 라우터 임포트
-const biblesRouter = require('./src/routes/bibles')
-const usersRouter = require('./src/routes/users')
-const prayBucketlistRouter = require('./src/routes/prayBucketlist')
-const graceRouter = require('./src/routes/grace')
-const prayDiaryRouter = require('./src/routes/prayDiary')
-const pickPostRouter = require('./src/routes/pickPosts')
-const bibleParagraphsRouter = require('./src/routes/bibleParagraphs')
-const sermonRouter = require('./src/routes/sermon')
-const otpRouter = require('./src/routes/otpNumbers')
+const biblesRouter = require('./bibles')
+const usersRouter = require('./users')
+const prayBucketlistRouter = require('./prayBucketlist')
+const graceRouter = require('./grace')
+const prayDiaryRouter = require('./prayDiary')
+const pickPostRouter = require('./pickPosts')
+const bibleParagraphsRouter = require('./bibleParagraphs')
+const sermonRouter = require('./sermon')
+const otpRouter = require('./otpNumbers')
 
 // 몽고 DB 연결
 mongoose.connect(config.MONGODB_URL)
