@@ -69,7 +69,7 @@ export function headerModule(isLoggedIn) {
 
 export async function logout(e) {
     if (e.target.innerText == '로그아웃') {
-        await fetch('https://backend.closetogod.site/api/users/logout', {
+        await fetch('/.netlify/functions/api/users/logout', {
             method: 'POST',
             credentials: 'include',
             headers: {

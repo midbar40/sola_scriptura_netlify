@@ -148,7 +148,7 @@ const receiveOtp = async (userNameValue, userMobileValue) => {
         otpTimerSpan.className = 'timer-display';
     }
 
-    const receiveOtp = await fetch('https://backend.closetogod.site/api/otp/generateOtp', {
+    const receiveOtp = await fetch('/.netlify/functions/api/otp/generateOtp', {
         method: 'POST',
         headers: {
             "Content-Type": "application/json"
@@ -193,7 +193,7 @@ const confirmOtp = async() => {
     const userMobile = document.querySelector('.userMobile')
     const otpNumber = document.querySelector('.otpNum')
     try{
-        const sendOtpToServer = await fetch('https://backend.closetogod.site/api/otp/checkOtp', {
+        const sendOtpToServer = await fetch('/.netlify/functions/api/otp/checkOtp', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"

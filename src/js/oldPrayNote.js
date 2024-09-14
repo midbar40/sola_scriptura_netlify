@@ -30,7 +30,7 @@ async function getPrayNoteServerData() {
 // PrayBucketlist 서버 데이터 가져오는 함수
 async function getPrayBucketlist() {
     try {
-        const data = await fetch('https://backend.closetogod.site/api/prayBucketlist/getBucket',
+        const data = await fetch('/.netlify/functions/api/prayBucketlist/getBucket',
             {
                 method: 'POST',
                 headers: {
@@ -88,7 +88,7 @@ const deleteAndEditPrayBucketlist = (prayBucketlistList) => {
         rightClickMenuDelete.addEventListener('click', function (e) {
             if(confirm('정말 삭제하시겠습니까?') === false) return
             else{
-                fetch('https://backend.closetogod.site/api/prayBucketlist/',
+                fetch('/.netlify/functions/api/prayBucketlist/',
                 {
                     method: 'DELETE',
                     headers: {
@@ -117,7 +117,7 @@ const deleteAndEditPrayBucketlist = (prayBucketlistList) => {
             editDetail.style.width = '100%'
             editDetail.addEventListener('keydown', function (e) {
                 if (e.key === 'Enter') {
-                    fetch('https://backend.closetogod.site/api/prayBucketlist/edit',
+                    fetch('/.netlify/functions/api/prayBucketlist/edit',
                         {
                             method: 'PUT',
                             headers: {
@@ -222,7 +222,7 @@ async function addPrayBucketlist(event) {
     // 몽고DB에 저장하는 코드 작성
     const saveServer = async (number, detail) => {
         try {
-            const response = await fetch('https://backend.closetogod.site/api/prayBucketlist/saveBucket', {
+            const response = await fetch('/.netlify/functions/api/prayBucketlist/saveBucket', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -271,7 +271,7 @@ function handleCheckboxChange(e) {
 
             const clickedDataDbId = e.target.closest('tr').className.split(' ')[1];
             const updatedCheckedDate = async () => {
-                const response = await fetch('https://backend.closetogod.site/api/prayBucketlist/checked', {
+                const response = await fetch('/.netlify/functions/api/prayBucketlist/checked', {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'
@@ -291,7 +291,7 @@ function handleCheckboxChange(e) {
 
             const clickedDataDbId = e.target.closest('tr').className.split(' ')[1];
             const updatedUnCheckedDate = async () => {
-                const response = await fetch('https://backend.closetogod.site/api/prayBucketlist/checked', {
+                const response = await fetch('/.netlify/functions/api/prayBucketlist/checked', {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'
@@ -321,7 +321,7 @@ let graceDbId = null
 // 감사기도 가져오기
 async function getGrace() {
     try {
-        const reponse = await fetch('https://backend.closetogod.site/api/grace/getGrace', {
+        const reponse = await fetch('/.netlify/functions/api/grace/getGrace', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -397,7 +397,7 @@ const deleteAndEditGraceList = (PrayerOfThanksList) => {
         rightClickMenuDelete.addEventListener('click', function (e) {
             if(confirm('정말 삭제하시겠습니까?') === false) return
             else{
-                fetch('https://backend.closetogod.site/api/grace/',
+                fetch('/.netlify/functions/api/grace/',
                 {
                     method: 'DELETE',
                     headers: {
@@ -426,7 +426,7 @@ const deleteAndEditGraceList = (PrayerOfThanksList) => {
             editDetail.style.width = '100%'
             editDetail.addEventListener('keydown', function (e) {
                 if (e.key === 'Enter') {
-                    fetch('https://backend.closetogod.site/api/grace/edit',
+                    fetch('/.netlify/functions/api/grace/edit',
                         {
                             method: 'PUT',
                             headers: {
@@ -469,7 +469,7 @@ async function addGraceList(event) {
     // 몽고DB에 저장하는 코드 작성
     const saveServer = async (number, detail) => {
         try {
-            const response = await fetch('https://backend.closetogod.site/api/grace/saveGrace', {
+            const response = await fetch('/.netlify/functions/api/grace/saveGrace', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -518,7 +518,7 @@ let clickedPrayDiaryId = null
 
 // 기도일기 작성(저장)
 const savePrayDiary = async () => {
-    const saveDiary = await fetch('https://backend.closetogod.site/api/prayDiary/saveDiary', {
+    const saveDiary = await fetch('/.netlify/functions/api/prayDiary/saveDiary', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -574,7 +574,7 @@ const showWarningModal = () => {
 // 포스트잇 가져오기
 const getPickPosts = async(postNum) => {
     try {
-        const response = await fetch(`https://backend.closetogod.site/api/pickPosts/post${postNum}`,{
+        const response = await fetch(`/.netlify/functions/api/pickPosts/post${postNum}`,{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -610,7 +610,7 @@ const showPickPosts = (firstPost, secondPost) => {
 // 포스트잇 저장
 const saveScripture = async (postNum, pickText) => {
     try {
-        const response = await fetch(`https://backend.closetogod.site/api/pickPosts/savePost${postNum}`, {
+        const response = await fetch(`/.netlify/functions/api/pickPosts/savePost${postNum}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -630,7 +630,7 @@ const saveScripture = async (postNum, pickText) => {
 // 포스트잇 업데이트
 const updateScripture = async (postNum, pickText) => {
     try {
-        const response = await fetch(`https://backend.closetogod.site/api/pickPosts/updatePost${postNum}`, {
+        const response = await fetch(`/.netlify/functions/api/pickPosts/updatePost${postNum}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -804,7 +804,7 @@ const cancelPrayDiary = () => {
 
 // 저장된 기도일기 서버에서 가져오기
 const getPrayDiary = async () => {
-    const response = await fetch('https://backend.closetogod.site/api/prayDiary/getDiary', {
+    const response = await fetch('/.netlify/functions/api/prayDiary/getDiary', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -849,7 +849,7 @@ let previousData = {
 
 // 기도일기 OUtput 화면에서 일기 클릭시 input창에 기도일기 내용 보여주기
 const showPrayDiaryDetail = async (clickedPrayDiaryId) => {
-    const response = await fetch('https://backend.closetogod.site/api/prayDiary/getDiaryDetail', {
+    const response = await fetch('/.netlify/functions/api/prayDiary/getDiaryDetail', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -942,7 +942,7 @@ const editPrayDiary = async (clickedPrayDiaryId) => {
     const prayDiaryTitle = document.querySelector('#prayDiary-title')
     const prayDiaryContent = document.querySelector('#prayDiary-content')
 
-    const response = await fetch('https://backend.closetogod.site/api/prayDiary/editDiary', {
+    const response = await fetch('/.netlify/functions/api/prayDiary/editDiary', {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -1005,7 +1005,7 @@ const deletePrayDiary = (prayDiaryList) => {
         rightClickMenuDelete.addEventListener('click', async function (e) {
             if(confirm('정말 삭제하시겠습니까?') === false) return
             else{
-                await fetch('https://backend.closetogod.site/api/prayDiary/deleteDiary',
+                await fetch('/.netlify/functions/api/prayDiary/deleteDiary',
                 {
                     method: 'DELETE',
                     headers: {

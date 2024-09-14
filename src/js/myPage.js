@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', checkIsLogined)
 const getUserData = async () => {
     try {
         const userEmail = localStorage.getItem('유저이름')
-        const data = await fetch('https://backend.closetogod.site/api/users/myPage', {
+        const data = await fetch('/.netlify/functions/api/users/myPage', {
             method: 'POST',
             credentials: 'include',
             headers: {
@@ -64,7 +64,7 @@ createUserDataDom()
 const cancleMembership = async () => {
     const userEmail = localStorage.getItem('유저이름')
     try {
-        const data = await fetch('https://solascriptura-env.eba-tk2vnisc.ap-southeast-2.elasticbeanstalk.com/api/users/deleteUser', {
+        const data = await fetch('/.netlify/functions/api/users/deleteUser', {
             method: 'DELETE',
             headers: {
                 "Content-Type": "application/json"
@@ -103,7 +103,7 @@ transFormEditBtn()
 
 // 마이페이지 로그아웃 
 const myPageLogout = async () => {
-    await fetch('https://backend.closetogod.site/api/users/logout', {
+    await fetch('/.netlify/functions/api/users/logout', {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -126,7 +126,7 @@ const changePw = async () => {
     const userEmail = localStorage.getItem('유저이름')
     const newPassword = document.querySelector('.newPassword').value
     try {
-        const data = await fetch('https://backend.closetogod.site/api/users/changeUserInfo', {
+        const data = await fetch('/.netlify/functions/api/users/changeUserInfo', {
             method: 'PUT',
             headers: {
                 "Content-Type": "application/json"

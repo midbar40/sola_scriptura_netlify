@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', checkIsLogined)
 // 성경 서버데이터 가져오기
 async function getBibleData() {
     try {
-        const data = await fetch('https://backend.closetogod.site/api/bible/psalms?title=시편')
+        const data = await fetch('/.netlify/functions/api/bible/psalms?title=시편')
         const bibleData = await data.json()
         return bibleData
     } catch (error) {

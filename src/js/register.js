@@ -73,7 +73,7 @@ async function getUserData() {
     }
     else {
         try {
-            const data = await fetch('https://backend.closetogod.site/api/users/register',
+            const data = await fetch('/.netlify/functions/api/users/register',
                 {
                     method: 'POST',
                     headers: {

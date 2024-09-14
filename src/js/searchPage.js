@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', checkIsLogined)
 // 서버데이터 가져오기
 async function getBibleData(searchWord) {
     try {
-        const data = await fetch(`https://backend.closetogod.site/api/bible/search?query=${searchWord}`)
+        const data = await fetch(`/.netlify/functions/api/bible/search?query=${searchWord}`)
         const bibleData = await data.json()
         page += 1;
         return bibleData
@@ -27,7 +27,7 @@ let page = 1;
 
 async function fetchItems() {
     try {
-        const reponse = await fetch(`https://backend.closetogod.site/api/bible/search?query=${searchWord}&page=${page}`)
+        const reponse = await fetch(`/.netlify/functions/api/bible/search?query=${searchWord}&page=${page}`)
         const bibleData = await reponse.json()
         page += 1;
         return bibleData.bibles

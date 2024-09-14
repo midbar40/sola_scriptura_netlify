@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', checkIsLogined)
 // 성경 서버데이터 랜덤 가져오기 -> 개선필요, 업로드가 너무 느림 -> 23.11.28 서버에서 랜덤으로 가져오도록 변경함 
 async function getBibleRandomData() {
     try {
-        const data = await fetch('/.netlify/functions/bibleParagraphs')
+        const data = await fetch('/.netlify/functions/api/bibleParagraphs')
         const bibleData = await data.json()
         return bibleData
     } catch (error) {

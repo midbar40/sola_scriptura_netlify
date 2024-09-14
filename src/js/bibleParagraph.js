@@ -28,7 +28,7 @@ createSubject()
 // 서버데이터 가져오기
 async function getServerData(category) {
     try {
-        const response = await fetch(`https://backend.closetogod.site/api/bibleParagraphs/${category}`)
+        const response = await fetch(`/.netlify/functions/api/bibleParagraphs/${category}`)
         const data = await response.json()
         return data
     } catch (error) {

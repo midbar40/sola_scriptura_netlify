@@ -31,7 +31,7 @@ export const createFindUserPwDom = () => {
 export const sendNewPw = async () => {
     const userIdInput = document.querySelector('.userIdInput')
     try {
-        const data = await fetch('https://backend.closetogod.site/api/users/findPw', {
+        const data = await fetch('/.netlify/functions/api/users/findPw', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
