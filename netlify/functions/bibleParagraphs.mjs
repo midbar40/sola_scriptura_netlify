@@ -1,4 +1,4 @@
-import { connectDb } from './dbConnect'
+import { connectDb } from './dbConnect.mjs'
 import BibleParagraph from '../models/BibleParagraph'
 import mongoose from 'mongoose'
 
