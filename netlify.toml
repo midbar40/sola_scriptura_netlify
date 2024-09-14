@@ -1,5 +1,4 @@
 [functions]
-directory = "functions"
 external_node_modules = ["express"]
 node_bundler = "esbuild"
 
@@ -9,7 +8,8 @@ node_bundler = "esbuild"
 package = "@netlify/plugin-functions-install-core"
 
 [build]
-  publish = "./src"  
+publish = "./src"  
+functions = "functions"
 
 [[redirects]]
   force = true
