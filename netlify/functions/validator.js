@@ -1,5 +1,5 @@
 const { body } = require('express-validator');
-const User = require('./src/models/User'); // 사용자 모델 임포트
+const User = require('../models/User'); // 사용자 모델 임포트
 
 const isFieldEmpty = (field) => { // Form 필드가 비어있는지 검사
     return body(field)
