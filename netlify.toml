@@ -1,0 +1,8 @@
+[functions]
+external_node_modules = ["mongoose", "jsonwebtoken", "dotenv"]
+
+[[plugins]]
+package = "@netlify/plugin-functions-install-core"
+
+[build]
+  publish = "./src"  # 정적 파일이 루트 디렉토리에 있을 때

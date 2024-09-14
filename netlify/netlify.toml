@@ -1,5 +1,0 @@
-[functions]
-external_node_modules = ["mongoose", "jsonwebtoken", "dotenv"]
-
-[[plugins]]
-package = "@netlify/plugin-functions-install-core"
