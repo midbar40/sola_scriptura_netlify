@@ -2,14 +2,12 @@
 external_node_modules = ["express"]
 node_bundler = "esbuild"
 
-
-
 [[plugins]]
 package = "@netlify/plugin-functions-install-core"
 
 [build]
 publish = "./src"  
-functions = "functions"
+
 
 [[redirects]]
   force = true
