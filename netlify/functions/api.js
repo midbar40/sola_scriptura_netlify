@@ -6,7 +6,7 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const config  = require('./config')
 const cookieParser = require('cookie-parser')
-
+const router = express.Router();
 
 // 라우터 임포트
 const biblesRouter = require('./bibles')
@@ -60,7 +60,7 @@ api.listen(port, () => { /* 서버실행 */
     console.log(`Now listening on port ${port}`)
 })
 
-
+router.get('/test', (req,res)=> res.send('이거는 될거같다'))
 module.exports.handler = serverless(api);
 
 
