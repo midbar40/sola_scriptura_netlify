@@ -45,7 +45,7 @@ api.use('/pickPosts', pickPostRouter)
 api.use('/bibleParagraphs', bibleParagraphsRouter)
 api.use('/sermon', sermonRouter)
 api.use('/otp', otpRouter)
-
+api.use('/api', router)
 // fallback handler
 api.use((req, res, next) => { // 사용자가 요청한 페이지가 없는 경우 에러처리
     res.status(404).send('페이지를 찾을 수 없습니다.')
