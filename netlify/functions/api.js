@@ -25,7 +25,7 @@ mongoose.connect(config.MONGODB_URL)
 .catch((e) => `몽고DB 연결 실패 : ${e}`)
 
 let corsOptions = {
-    origin: ['http://127.0.0.1:5500', 'https://closetogod.netlify.app'],
+    origin: ['http://127.0.0.1:5500', 'https://closetogod.netlify.app','https://closetogod.site'],
     credentials: true,
 }
 
