@@ -5,10 +5,10 @@ const BibleParagraph  = require('../models/BibleParagraph')
 const expressAsyncHandler = require('express-async-handler')
 
 
-router.get('/', expressAsyncHandler(async(req, res) => {
+router.get('/', (req, res) => {
     console.log('여기 들어오는지 테스트 합니다')
     res.status(200).json({ code: 200, message: '여기 들어오는지 테스트 합니다'})
-}))
+})
 
 
 // 성경구절 조회
