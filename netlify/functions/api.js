@@ -47,13 +47,13 @@ api.use('/api/bible', biblesRouter)
 
 
 // fallback handler
-api.use((req, res, next) => { // 사용자가 요청한 페이지가 없는 경우 에러처리
-        res.status(404).send('페이지를 찾을 수 없습니다, 여기는 들어온다')
-    })
-api.use((err, req, res, next) => { // 서버 내부 오류 처리
-    console.error(err.stack)
-    res.status(500).send('서버에 문제가 발생하였습니다.')
-})
+// api.use((req, res, next) => { // 사용자가 요청한 페이지가 없는 경우 에러처리
+//         res.status(404).send('페이지를 찾을 수 없습니다, 여기는 들어온다')
+//     })
+// api.use((err, req, res, next) => { // 서버 내부 오류 처리
+//     console.error(err.stack)
+//     res.status(500).send('서버에 문제가 발생하였습니다.')
+// })
 
 
 
