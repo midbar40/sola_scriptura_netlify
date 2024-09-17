@@ -1,5 +1,6 @@
+[functions]
+external_node_modules = ["express"]
 
 [build]
 publish = "./src"  
-functions='functions'
 

@@ -3,9 +3,6 @@ const express = require('express')
 const Bible  = require('../models/Bible')
 const expressAsyncHandler = require('express-async-handler')
 
-const mongoose = require('mongoose')
-const { Types : {ObjectId} } = mongoose
-
 const router = express.Router()
 
 // 성경전문조회
