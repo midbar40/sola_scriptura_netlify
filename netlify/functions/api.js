@@ -35,7 +35,7 @@ api.use(logger('tiny')) // logger 설정
 api.use(cookieParser())
 
 // 라우터 설정
-api.use('/', biblesRouter)
+api.use('/api/bible', biblesRouter)
 // api.use('/api/users', usersRouter)
 // api.use('/api/prayBucketlist', prayBucketlistRouter)
 // api.use('/api/grace', graceRouter)
