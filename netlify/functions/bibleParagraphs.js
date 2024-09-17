@@ -1,12 +1,15 @@
 // 전역변수
 const express = require('express')
+const router = express.Router()
 const BibleParagraph  = require('../models/BibleParagraph')
 const expressAsyncHandler = require('express-async-handler')
 
-const mongoose = require('mongoose')
-const { Types : {ObjectId} } = mongoose
 
-const router = express.Router()
+router.get('/', expressAsyncHandler(async(req, res) => {
+    console.log('여기 들어오는지 테스트 합니다')
+    res.status(200).json({ code: 200, message: '여기 들어오는지 테스트 합니다'})
+}))
+
 
 // 성경구절 조회
 router.get('/:category', expressAsyncHandler(async(req, res) => {
