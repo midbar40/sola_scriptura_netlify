@@ -35,22 +35,20 @@ api.use(logger('tiny')) // logger 설정
 api.use(cookieParser())
 
 // 라우터 설정
-api.use('/bible', biblesRouter)
-api.use('/users', usersRouter)
-api.use('/prayBucketlist', prayBucketlistRouter)
-api.use('/grace', graceRouter)
-api.use('/prayDiary', prayDiaryRouter)
-api.use('/pickPosts', pickPostRouter)
-api.use('/bibleParagraphs', bibleParagraphsRouter)
-api.use('/sermon', sermonRouter)
-api.use('/otp', otpRouter)
-
-
+api.use('/', biblesRouter)
+// api.use('/api/users', usersRouter)
+// api.use('/api/prayBucketlist', prayBucketlistRouter)
+// api.use('/api/grace', graceRouter)
+// api.use('/api/prayDiary', prayDiaryRouter)
+// api.use('/api/pickPosts', pickPostRouter)
+// api.use('/api/bibleParagraphs', bibleParagraphsRouter)
+// api.use('/api/sermon', sermonRouter)
+// api.use('/api/otp', otpRouter)
 
 
 // fallback handler
 api.use((req, res, next) => { // 사용자가 요청한 페이지가 없는 경우 에러처리
-        res.status(404).send('페이지를 찾을 수 없습니다.')
+        res.status(404).send('페이지를 찾을 수 없습니다, 여기는 들어온다')
     })
 api.use((err, req, res, next) => { // 서버 내부 오류 처리
     console.error(err.stack)
