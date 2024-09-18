@@ -18,6 +18,7 @@ async function getBibleRandomData() {
     try {
         const data = await fetch('/.netlify/functions/api/bibleParagraphs')
         const bibleData = await data.json()
+        console.log('bibledata', bibleData)
         return bibleData
     } catch (error) {
         console.log(error)
