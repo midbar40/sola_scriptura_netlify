@@ -1,11 +1,3 @@
 [functions]
-external_node_modules = ["express"]
+functions = "functions"
 
-[build]
-publish = "./src"  
-
-[[redirects]]
-  force = true
-  from = "/api/*"
-  status = 200
-  to = "/.netlify/functions/api/:splat"
