@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { Types: { ObjectId } } = require('mongoose')
-const OtpNumber = require('../models/OtpNumber')
-const User = require('../models/User')
+const OtpNumber = require('../src/models/OtpNumber')
+const User = require('../src/models/User')
 const expressAsyncHandler = require('express-async-handler')
 
 // twilo 연동

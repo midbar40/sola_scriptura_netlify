@@ -1,10 +1,10 @@
 const express = require('express')
 const serverless = require('serverless-http');
-const api = express()
+const app = express()
 const logger = require('morgan')
 const mongoose = require('mongoose')
 const cors = require('cors')
-const config  = require('./config')
+const config  = require('../src/config')
 const cookieParser = require('cookie-parser')
 
 // 라우터 임포트
@@ -29,34 +29,34 @@ let corsOptions = {
 }
 
 // 공통 미들웨어
-api.use(cors(corsOptions)) // cors 설정, 이걸 계속 빼먹네..
-api.use(express.json()) //request body 파싱 
-api.use(logger('tiny')) // logger 설정
-api.use(cookieParser())
+app.use(cors(corsOptions)) // cors 설정, 이걸 계속 빼먹네..
+app.use(express.json()) //request body 파싱 
+app.use(logger('tiny')) // logger 설정
+app.use(cookieParser())
 
 // 라우터 설정
-api.use('/bible', biblesRouter)
-api.use('/users', usersRouter)
-api.use('/prayBucketlist', prayBucketlistRouter)
-api.use('/grace', graceRouter)
-api.use('/prayDiary', prayDiaryRouter)
-api.use('/pickPosts', pickPostRouter)
-api.use('/bibleParagraphs', bibleParagraphsRouter)
-api.use('/sermon', sermonRouter)
-api.use('/otp', otpRouter)
+app.use('/bible', biblesRouter)
+app.use('/users', usersRouter)
+app.use('/prayBucketlist', prayBucketlistRouter)
+app.use('/grace', graceRouter)
+app.use('/prayDiary', prayDiaryRouter)
+app.use('/pickPosts', pickPostRouter)
+app.use('/bibleParagraphs', bibleParagraphsRouter)
+app.use('/sermon', sermonRouter)
+app.use('/otp', otpRouter)
 
 
 // // fallback handler
-// api.use((req, res, next) => { // 사용자가 요청한 페이지가 없는 경우 에러처리
-//         res.status(404).send('페이지를 찾을 수 없습니다, 여기는 들어온다')
-//     })
-// api.use((err, req, res, next) => { // 서버 내부 오류 처리
-//     console.error(err.stack)
-//     res.status(500).send('서버에 문제가 발생하였습니다.')
-// })
+app.use((req, res, next) => { // 사용자가 요청한 페이지가 없는 경우 에러처리
+        res.status(404).send('페이지를 찾을 수 없습니다, 여기는 들어온다')
+    })
+app.use((err, req, res, next) => { // 서버 내부 오류 처리
+    console.error(err.stack)
+    res.status(500).send('서버에 문제가 발생하였습니다.')
+})
 
 
 
-module.exports.handler = serverless(api);
+module.exports.handler = serverless(app);
 
 

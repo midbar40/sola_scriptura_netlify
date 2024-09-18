@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
 const mongoose = require('mongoose')
-const Sermon = require('../models/Sermon')
-const User = require('../models/User')
+const Sermon = require('../src/models/Sermon')
+const User = require('../src/models/User')
 const expressAsyncHandler = require('express-async-handler')
 
 

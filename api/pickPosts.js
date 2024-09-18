@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const { Types: { ObjectId } } = require('mongoose')
-const PickPost = require('../models/PickPost')
-const User = require('../models/User')
+const PickPost = require('../src/models/PickPost')
+const User = require('../src/models/User')
 const expressAsyncHandler = require('express-async-handler')
 
 // pickPost1 가져오기

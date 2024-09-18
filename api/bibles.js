@@ -1,6 +1,6 @@
 // 전역변수
 const express = require('express')
-const Bible  = require('../models/Bible')
+const Bible  = require('../src/models/Bible')
 const expressAsyncHandler = require('express-async-handler')
 
 const router = express.Router()

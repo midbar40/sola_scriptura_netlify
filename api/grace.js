@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { Types : {ObjectId} } = require('mongoose')
-const Grace = require('../models/Grace')
-const User = require('../models/User')
+const Grace = require('../src/models/Grace')
+const User = require('../src/models/User')
 const expressAsyncHandler = require('express-async-handler')
 
 

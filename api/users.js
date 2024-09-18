@@ -1,5 +1,5 @@
 const express = require('express')
-const User = require('../models/User')
+const User = require('../src/models/User')
 const expressAsyncHandler = require('express-async-handler')
 
 // setCookie헤더로 변경필요
@@ -11,7 +11,7 @@ const {
     validateUserMobile,
     validateUserEmail,
     validateUserPassword
-} = require('./validator')
+} = require('../src/validator')
 
 // 토큰 생성
 const { generateToken } = require('./auth')

@@ -1,6 +1,6 @@
 const express = require('express')
-const PrayBucketlist = require('../models/PrayBucketlist')
-const User = require('../models/User')
+const PrayBucketlist = require('../src/models/PrayBucketlist')
+const User = require('../src/models/User')
 const expressAsyncHandler = require('express-async-handler')
 const mongoose = require('mongoose')
 
