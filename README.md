@@ -35,7 +35,9 @@ react, next.js는 정말 너무 좋은 라이브러리 였습니다..
 
 5. 나의 기도노트 페이지에서 버킷리스트, 감사기도, 기도일기, 설교노트를 작성할 수 있습니다 
 ![버킷리스트 & 감사기도](https://github.com/user-attachments/assets/3e65f1d2-243b-4f9a-bbd3-52ea7c6193d5)
+
 ![기도일기](https://github.com/user-attachments/assets/9c100044-a95a-4fed-bb52-79c61c1ad36a)
+
 ![설교노트](https://github.com/user-attachments/assets/991ee766-69a4-4556-b8df-19a8f2596703)
 
    
