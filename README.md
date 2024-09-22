@@ -33,12 +33,10 @@ react, next.js는 정말 너무 좋은 라이브러리 였습니다..
 
 ![시편필사](https://github.com/wilderness40/solascriptura/assets/124757916/07da84c1-ed3b-4540-a8a0-49fbec1a90be)
 
-5. 나의 기도제목을 작성할 수 있습니다 
-![기도제목](https://github.com/user-attachments/assets/0991d057-cf65-44d2-ac3c-6d2a7da1a85b)
-  
-
-
-
+5. 나의 기도노트 페이지에서 버킷리스트, 감사기도, 기도일기, 설교노트를 작성할 수 있습니다 
+![버킷리스트 & 감사기도](https://github.com/user-attachments/assets/3e65f1d2-243b-4f9a-bbd3-52ea7c6193d5)
+![기도일기](https://github.com/user-attachments/assets/9c100044-a95a-4fed-bb52-79c61c1ad36a)
+![설교노트](https://github.com/user-attachments/assets/991ee766-69a4-4556-b8df-19a8f2596703)
 
    
 ### 출처 및 참고사이트
